@@ -22,12 +22,12 @@
       padding: 20px;
       background: #1a1a2e;
       border-radius: 12px;
+      width: 320px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      width: 300px;
     }
 
     button {
-      padding: 12px 20px;
+      padding: 12px 18px;
       font-size: 16px;
       border: none;
       border-radius: 8px;
@@ -40,6 +40,12 @@
     button:hover {
       background: #4752c4;
     }
+
+    .small {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-top: 10px;
+    }
   </style>
 </head>
 
@@ -47,21 +53,28 @@
 
   <div class="container">
     <h1>YoDarren Activity</h1>
-    <p>Open your link below</p>
+    <p>Click below to open the video</p>
 
-    <button onclick="openLink()">Open Link</button>
+    <button onclick="openVideo()">Open Link</button>
+
+    <p class="small">If blocked, it will redirect automatically.</p>
   </div>
 
   <script>
-    const URL = "https://yo-darren-1gup5srim-yodarren-softwares.vercel.app/";
+    const TARGET_URL = "https://youtu.be/5c5eXSArn28?si=Hwt8ixvI_rxeGYc8";
 
-    function openLink() {
-      // safest method for Discord iframe
-      window.open(URL, "_blank") || (window.location.href = URL);
+    function openVideo() {
+      // safest Discord + browser method
+      const win = window.open(TARGET_URL, "_blank");
+
+      // fallback if popup blocked
+      if (!win) {
+        window.location.href = TARGET_URL;
+      }
     }
 
-    // auto-test load (helps confirm page is NOT white)
-    console.log("YoDarren Activity Loaded");
+    // debug check (fixes "white screen confusion")
+    console.log("YoDarren Activity loaded successfully");
   </script>
 
 </body>
