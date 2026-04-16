@@ -4,21 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>YoDarren Activity</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f1a;
+      color: white;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a2e;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      width: 300px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #5865F2;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #4752c4;
+    }
+  </style>
 </head>
+
 <body>
 
   <div class="container">
     <h1>YoDarren Activity</h1>
-    <p>Click the button below to open the website.</p>
+    <p>Open your link below</p>
 
-    <button id="openBtn">Open Link</button>
-
-    <p class="small">
-      If the button doesn’t work, it will auto-fallback.
-    </p>
+    <button onclick="openLink()">Open Link</button>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const URL = "https://yo-darren-1gup5srim-yodarren-softwares.vercel.app/";
+
+    function openLink() {
+      // safest method for Discord iframe
+      window.open(URL, "_blank") || (window.location.href = URL);
+    }
+
+    // auto-test load (helps confirm page is NOT white)
+    console.log("YoDarren Activity Loaded");
+  </script>
+
 </body>
 </html>
