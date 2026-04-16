@@ -23,5 +23,5 @@ init();
 
 // Button click → open link
 document.getElementById("openBtn").addEventListener("click", () => {
-  window.open("https://example.com", "_blank");
+  window.open("https://youtu.be/5c5eXSArn28?si=YxEjEWTSuDc2atVi", "_blank");
 });
