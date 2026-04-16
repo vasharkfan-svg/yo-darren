@@ -1,18 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Link Activity</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>Open Website</h1>
-    <button id="openBtn">Open Link</button>
-    <p id="status">Connecting to Discord...</p>
-  </div>
 
-  <script src="https://unpkg.com/@discord/embedded-app-sdk"></script>
-  <script src="main.js"></script>
-</body>
-</html>
