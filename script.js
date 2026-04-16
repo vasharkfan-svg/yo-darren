@@ -1,5 +1,5 @@
 // 🔗 CHANGE THIS TO YOUR URL
-const TARGET_URL = "https://yo-darren-1gup5srim-yodarren-softwares.vercel.app/";
+const TARGET_URL = "https://youtu.be/5c5eXSArn28?si=Hwt8ixvI_rxeGYc8";
 
 document.getElementById("openBtn").addEventListener("click", () => {
   
